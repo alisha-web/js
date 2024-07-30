@@ -429,15 +429,148 @@ if (inputFirstName === firstName && inputLastName === lastName) {
     alert("Names match");
 }
 
+// Chapter 14 (If statements nested)
 
+// 1. Code an if statement enclosing a nested if. If password is not
+// empty, then check if password is not greater than 5 , then display
+// an alert that says "Password must be greater than 5" if greater
+// than 5 then Alert "OK".
+var password = prompt("Enter your password");
 
+if (password) {
+    if (password.length <= 5) {
+        alert("Password must be greater than 5");
+    } else {
+        alert("OK");
+    }
+}
 
+// 2. Try this statement by yourself
+// if (a === 1) {
+// if (c === "Max") {
+// alert("OK");
+// }
+// }
+if (a === 1 && c === "Max") {
+    alert("OK");
+}
 
+// 3. Code the first line of an if statement that avoids the nesting above
+// by testing for multiple conditions.
+// if (a === 1) {
+// if (c === "Max") {
 
+// alert("OK");
+// }
+// }
+var num1 = 5;
+var num2 = 5;
 
+if (num1 === num2) {
+    if (num1 <= num2) {
+        alert("Numbers are equal and less than or equal to each other");
+    }
+}
 
+// 4. Declare two variables and assign them the same number value.
+// Test two conditions, using nested if statements. Test whether th
+// first variable equals the second variable and also whether it is less
+// than or equal to the second variable. If the test passes—and it
+// will—display an alert message.
+var num1 = 10;
+var num2 = 10;
 
+if (num1 === num2) {
+    if (num1 <= num2) {
+        alert("The numbers are equal and num1 is less than or equal to num2");
+    }
+}
 
+// Chapter 15 (Array I)
 
+// 1. Declare an empty array.
+var emptyArray = [];
 
+// 2. Code an array with 1 string element
+var singleElementArray = ["hello"];
 
+// 3. var alphabet = ["h","i","j","k"]. Now print the letter “j” in alert
+// using array index
+var alphabet = ["h", "i", "j", "k"];
+alert(alphabet[2]);
+
+// 4. var alphabet=["h","i","j","k", “l”,”m”, “n”, “o”]. Find the total
+// length of array.
+var alphabet = ["h", "i", "j", "k", "l", "m", "n", "o"];
+var arrayLength = alphabet.length;
+
+// 5. Declare an array with one element and Add a second element
+// with index in array. Create an alert whose message is the new
+// element.
+var array = ["firstElement"];
+array[1] = "secondElement";
+alert(array[1]);
+
+// Chapter 16 (Array II)
+
+// 1. Code an array with 1 string element.
+// Add an additional element to the array using push.
+// Create an alert whose message is the last element.
+var array = ["initialElement"];
+array.push("newElement");
+alert(array[array.length - 1]);
+
+// 2. var Alphabet=["h","i","j","k"]
+// Remove the last element from the array Alphabet.
+var Alphabet = ["h", "i", "j", "k"];
+Alphabet.pop();
+
+// 3. var Alphabet=["h","i","j","k"]
+// Add a new element, a number, to the end of an array.
+var Alphabet = ["h", "i", "j", "k"];
+Alphabet.push(10);
+
+// Chapter 16 (Array III)
+
+// 1. var sizes = ["S", "M", "XL", "XXL", "XXXL"].
+// Remove the first element of an array.
+var sizes = ["S", "M", "XL", "XXL", "XXXL"];
+sizes.shift();
+
+// 2. var sizes = ["S", "M", "XL", "XXL", "XXXL"].
+// Add three number elements to the beginning of an array.
+var sizes = ["S", "M", "XL", "XXL", "XXXL"];
+sizes.unshift(1, 2, 3);
+
+// 3. Declare an array with one element.
+// Add a second element to the beginning of the array.
+// Create an alert whose message is the new first element.
+var array = ["firstElement"];
+array.unshift("newFirstElement");
+alert(array[0]);
+
+// 4. var sizes = ["S", "M", "XL", "XXL", "XXXL"].
+// Insert "L" into the array between "M" and "XL".
+var sizes = ["S", "M", "XL", "XXL", "XXXL"];
+sizes.splice(2, 0, "L");
+
+// 5. var sizes = ["S", "M", "XL", "XXL", "XXXL"].
+// Copy the first 3 sizes of the array and put them into a new array,
+// regSizes.
+var sizes = ["S", "M", "XL", "XXL", "XXXL"];
+var regSizes = sizes.slice(0, 3);
+
+// 6. var pets = ["dog", "cat", "ox", "duck", "frog"].
+// Add 2 elements after "dog" and remove "cat", "ox", and "duck".
+var pets = ["dog", "cat", "ox", "duck", "frog"];
+pets.splice(1, 3, "parrot", "hamster");
+
+// 7. var pets = ["dog", "cat", "ox", "duck", "frog"];
+// Remove "cat" and "ox".
+var pets = ["dog", "cat", "ox", "duck", "frog"];
+pets.splice(1, 2);
+
+// 8. var pets = ["dog", "cat", "ox", "duck", "frog", "flea"];
+// Reduce it to "duck" and "frog" using slice.
+var pets = ["dog", "cat", "ox", "duck", "frog", "flea"];
+var reducedPets = pets.slice(3, 5);
